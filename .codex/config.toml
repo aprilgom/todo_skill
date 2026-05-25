@@ -1,0 +1,10 @@
+[features]
+hooks = true
+
+[[hooks.UserPromptSubmit]]
+
+[[hooks.UserPromptSubmit.hooks]]
+type = "command"
+command = "bash .living-plan/scripts/user_prompt_plan_gate.sh"
+timeout = 10
+statusMessage = "Checking living plan freshness"

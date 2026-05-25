@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+repo_root="$(git rev-parse --show-toplevel)"
+
+if [[ -x "$repo_root/.living-plan/scripts/pre_commit_plan_gate.sh" ]]; then
+	"$repo_root/.living-plan/scripts/pre_commit_plan_gate.sh"
+fi
